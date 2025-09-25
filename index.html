@@ -1,40 +1,46 @@
 <!-- === index.html ===
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>R_ONE Shoes — Premium Streetwear Sneakers</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="R_ONE Shoes — street-smart minimal sneakers built for comfort and style. Discover the collection.">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <a class="logo" href="#">R_ONE</a>
-      <nav class="nav">
-        <a href="#collection">Collection</a>
-        <a href="#featured">Featured</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="actions">
-        <button class="icon-btn">🛒</button>
-        <button class="cta">Shop Now</button>
-      </div>
-    </div>
-  </header>
+<section id="contact" class="contact section">
+<div class="container contact-grid">
+<div>
+<h2>Get in Touch</h2>
+<p>Questions about fit, wholesale, or collaborations? Send us a message.</p>
+<form class="contact-form">
+<input type="text" placeholder="Your name" required>
+<input type="email" placeholder="Your email" required>
+<textarea placeholder="Message" rows="4" required></textarea>
+<button class="btn primary" type="submit">Send</button>
+</form>
+</div>
+<div class="newsletter">
+<h3>Join Our Circle</h3>
+<p>Subscribe for early drops, restock alerts, and exclusive offers.</p>
+<form class="subscribe-form">
+<input type="email" placeholder="Email address" required>
+<button class="btn" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+</main>
 
-  <main>
-    <section class="hero advanced-hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Elevate Every Step</h1>
-          <p>R_ONE Shoes fuse bold minimalism with comfort engineered for street style. Step into shoes that define presence.</p>
-          <div class="hero-ctas">
+
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>© <span id="year"></span> R_ONE Shoes</div>
+<div class="footer-links">
+<a href="#">Terms</a>
+<a href="#">Privacy</a>
+</div>
+</div>
+</footer>
+
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('form').forEach(f => f.addEventListener('submit', e => { e.preventDefault(); alert('Thanks! This is a demo form.'); }));
+</script>
+</body>
+</html>          <div class="hero-ctas">
             <a class="btn primary" href="#collection">Explore Collection</a>
             <a class="btn ghost" href="#about">Our Story</a>
           </div>
